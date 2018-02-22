@@ -8,7 +8,7 @@
 /****************************************
     TABLE OF CONTENTS
 
-01. General Styles 
+01. General Styles
 02. Preloader
 03. Navigation
 04. Header
@@ -257,7 +257,7 @@ p.under-heading {
 	left: 50%; /* centers the loading animation horizontally one the screen */
 	width: 60px;
 	height: 20px;
-	margin: -10px 0 0 -30px; /* is width and height divided by two */ 
+	margin: -10px 0 0 -30px; /* is width and height divided by two */
 	text-align: center;
 }
 
@@ -287,10 +287,10 @@ p.under-heading {
 }
 
 @keyframes sk-bouncedelay {
-	0%, 80%, 100% { 
+	0%, 80%, 100% {
 		-webkit-transform: scale(0);
 		transform: scale(0);
-	} 40% { 
+	} 40% {
 		-webkit-transform: scale(1.0);
 		transform: scale(1.0);
 	}
@@ -332,7 +332,7 @@ p.under-heading {
 .navbar .nav.navbar-nav li a {
 	color: #fff;
 	opacity: 0.8;
-	font: 400 15px/1em "Khula", sans-serif; 
+	font: 400 15px/1em "Khula", sans-serif;
 }
 
 .navbar .nav.navbar-nav li a:hover,
@@ -357,7 +357,7 @@ p.under-heading {
 .navbar .navbar-toggle:active .icon-bar,
 .navbar .navbar-toggle.collapsed:active .icon-bar {
 	background-color: #191919;
-} 
+}
 /* end of mobile menu toggle button - pressed */
 
 /* Mobile menu toggle button */
@@ -377,90 +377,55 @@ p.under-heading {
 /**********************/
 header {
 	position: relative;
-	overflow: hidden;
-	min-height: 100%;
 	width: 100%;
+	min-height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../images/header-background.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-header .header-content {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	min-height: 100vh; 
-	text-align: center;
-}
-
+/* IE fix for vertical alignment in flex box */
 header .flex-container-wrapper {
-	/* IE fix for vertical alignment in flex box */
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 }
 
-header .header-content .swiper-container-header {
-	position: absolute;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
-	background: #f0f9fc;
-}
-  
-header .swiper-container-header .swiper-slide.first .slider-background {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("http://placehold.it/1920x1080/3a3a3a/fff/") center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-header .swiper-container-header .swiper-slide.second .slider-background {
-	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("http://placehold.it/1920x1080/3a3a3a/fff/") center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-header .swiper-container-header .swiper-slide.third .slider-background {
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("http://placehold.it/1920x1080/3a3a3a/fff/") center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-header .swiper-container-header .swiper-slide .slider-background {
-	width: 100%;
-	min-height: 100%;
-	height: 100vh;
-	background-color: #f0f9fc;
-}
-
-header .header-content .content-overlay {
+header .header-content.video-section {
 	position: relative;
-	z-index: 3;
+	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	min-height: 100vh;
-	padding: 70px 0px 20px 0px;	
+	text-align: center;
 }
 
-header .header-content h1 {
+/* Video background section from YTPlayer */
+header .header-content.video-section .pattern-overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 90px 0px 20px 0px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)); /* increase 0.3 to any value under 1 to darken the video background */
+}
+
+header .header-content.video-section h1 {
 	color: #fff;
 }
 
-header .header-content p.heading-paragraph {
+header .header-content.video-section p.heading-paragraph {
 	margin-top: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
-	font: 300 26px/1.4em "Khula", sans-serif;
 	color: #fff;
+	font: 300 26px/1.4em "Khula", sans-serif;
 }
 
-header .header-content .button-solid {
+header .header-content.video-section .button-solid {
 	display: block;
 	width: 180px;
 	height: 48px;
@@ -470,7 +435,7 @@ header .header-content .button-solid {
 	font: 500 17px/46px "Montserrat", sans-serif;
 }
 
-header .header-content .fa-angle-down {
+header .header-content.video-section .fa-angle-down {
 	margin-top: 40px;
 	color: #ff631e;
 	-o-transition: all .2s;
@@ -479,7 +444,7 @@ header .header-content .fa-angle-down {
     transition: all .2s;
 }
 
-header .header-content .fa-angle-down:hover {
+header .header-content.video-section .fa-angle-down:hover {
 	-webkit-transform: translate(0px, 7px);
 	-moz-transform: translate(0px, 7px);
 	-o-transform: translate(0px, 7px);
@@ -520,7 +485,7 @@ header .header-content .fa-angle-down:hover {
 	font-size: 18px;
 	text-align: center;
 }
-	
+
 .swiper-container img {
 	width: 100%;
 }
@@ -753,9 +718,9 @@ header .header-content .fa-angle-down:hover {
 
 .products .product-container .image-container img {
 	margin: 0px;
-	-webkit-transition: all 0.3s; 
-	-moz-transition: all 0.3s; 
-	-o-transition: all 0.3s; 
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -763,7 +728,7 @@ header .header-content .fa-angle-down:hover {
 	-moz-transform: scale(1.15);
 	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
-} 
+}
 /* end of products images hover animation */
 
 .products .product-container h4 {
@@ -870,29 +835,29 @@ header .header-content .fa-angle-down:hover {
 /* animate in */
 .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
 	opacity: 1;
-	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
-	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+	transform: translateY(0) perspective( 600px ) rotateX( 0 );
 }
 
 /* animate out */
 .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
 	opacity: 0;
-	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
-	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
 }
 
 /* Dark overlay, start state */
 .my-mfp-slide-bottom.mfp-bg {
 	opacity: 0;
-	-webkit-transition: opacity 0.3s ease-out; 
-	-moz-transition: opacity 0.3s ease-out; 
-	-o-transition: opacity 0.3s ease-out; 
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
 	transition: opacity 0.3s ease-out;
 }
 
@@ -1038,7 +1003,6 @@ header .header-content .fa-angle-down:hover {
 .projects {
 	padding-top: 66px;
 	padding-bottom: 90px;
-	background: #f4f4f4;
 }
 
 .projects hr.under-heading {
@@ -1079,9 +1043,9 @@ header .header-content .fa-angle-down:hover {
 	margin-top: 30px;
 }
 
-.projects .element-item { 
+.projects .element-item {
 	position: relative;
-	width: 50%; 
+	width: 50%;
 }
 
 .element-item img {
@@ -1095,9 +1059,9 @@ header .header-content .fa-angle-down:hover {
 
 .projects .grid .element-item img {
 	margin: 0px;
-	-webkit-transition: all 0.3s; 
-	-moz-transition: all 0.3s; 
-	-o-transition: all 0.3s; 
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -1105,10 +1069,10 @@ header .header-content .fa-angle-down:hover {
 	-moz-transform: scale(1.15);
 	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
-} 
+}
 /* end of projects images hover animation */
 
-.projects .grid .element-item .element-item-overlay { 
+.projects .grid .element-item .element-item-overlay {
 	position: absolute;
 	z-index: 2;
 	top: 0;
@@ -1117,13 +1081,13 @@ header .header-content .fa-angle-down:hover {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.4);
 	opacity: 1;
-	-webkit-transition: all 0.3s; 
-	-moz-transition: all 0.3s 
-	-o-transition: all 0.3s; 
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
-.projects .grid .element-item .element-item-overlay span { 
+.projects .grid .element-item .element-item-overlay span {
 	position: absolute;
 	z-index: 3;
 	top: 47%;
@@ -1302,7 +1266,7 @@ header .header-content .fa-angle-down:hover {
 
 .about .progress {
 	height: 28px;
-	margin-top: 15px; 
+	margin-top: 15px;
 	margin-bottom: 16px;
 	border-radius: 1px;
 }
@@ -1325,24 +1289,24 @@ header .header-content .fa-angle-down:hover {
 	padding-top: 30px;
 	padding-bottom: 100px;
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('http://placehold.it/1578x493/3a3a3a/fff/') center no-repeat;
-	background-size: cover; 
+	background-size: cover;
 }
 
 .statistics .number-container {
 	display: inline-block;
-	min-width: 210px; 
+	min-width: 210px;
 }
 
 .statistics p {
 	margin-top: 70px;
 	margin-bottom: 0px;
 	color: #fff;
-	font: 300 80px/1em "Montserrat", sans-serif;	
+	font: 300 80px/1em "Montserrat", sans-serif;
 }
 
 .statistics .big-numbers-heading {
 	margin-top: 10px;
-	color: #fff; 
+	color: #fff;
 	font: 300 18px/1.4em "Montserrat", sans-serif;
 }
 
@@ -1353,6 +1317,7 @@ header .header-content .fa-angle-down:hover {
 .team {
 	padding-top: 65px;
 	padding-bottom: 70px;
+	background-color: #f3f3f3;
 }
 
 .team .team-member {
@@ -1407,7 +1372,7 @@ header .header-content .fa-angle-down:hover {
 	transition: opacity .3s ease;
 }
 
-.team .team-member .image-container:hover .hover-overlay {	
+.team .team-member .image-container:hover .hover-overlay {
 	opacity: 1;
 }
 
@@ -1417,7 +1382,7 @@ header .header-content .fa-angle-down:hover {
 	margin-bottom: 0px;
 }
 
-.team .team-member .image-container .hover-overlay .social-links {	
+.team .team-member .image-container .hover-overlay .social-links {
 	margin-top: 5px;
 	margin-right: auto;
 	margin-left: auto;
@@ -1447,9 +1412,9 @@ header .header-content .fa-angle-down:hover {
 	color: #fff;
 }
 
-.team .team-member .image-container .hover-overlay a, 
+.team .team-member .image-container .hover-overlay a,
 .team .team-member .image-container .hover-overlay a:hover {
-	color: #fff;	
+	color: #fff;
 }
 /* end of team members images hover state */
 
@@ -1478,7 +1443,7 @@ header .header-content .fa-angle-down:hover {
 	height: 42px;
 	max-width: 300px;
 	padding-top: 10px;
-	border: 1px solid #d6d6d6; 
+	border: 1px solid #d6d6d6;
 	border-radius: 1px;
 	color: #283135;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
@@ -1553,7 +1518,7 @@ header .header-content .fa-angle-down:hover {
 	position: relative;
 	overflow: hidden;
 	height: 0;
-	margin-top: 30px; 
+	margin-top: 30px;
 	padding-bottom: 56.25%;
 	border-radius: 4px;
 }
@@ -1564,7 +1529,7 @@ header .header-content .fa-angle-down:hover {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: none; 
+	border: none;
 }
 
 .contact form {
@@ -1581,7 +1546,7 @@ header .header-content .fa-angle-down:hover {
 	padding-bottom: 3px;
 	color: #283135;
 	border: 1px solid #d6d6d6;
-	border-radius: 1px;	
+	border-radius: 1px;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
 
@@ -1589,7 +1554,7 @@ header .header-content .fa-angle-down:hover {
 	margin-top: 20px;
 	padding-top: 12px;
 	color: #283135;
-	border: 1px solid #d6d6d6; 
+	border: 1px solid #d6d6d6;
 	border-radius: 1px;
 }
 
@@ -1691,12 +1656,12 @@ a.back-to-top {
 	height: 42px;
 	border-radius: 30px;
 	background: #000 url("../images/up-arrow.png") no-repeat center 47%;
-	background-size: 18px 18px; 
+	background-size: 18px 18px;
 	text-indent: -9999px;
 }
 
 a:hover.back-to-top {
-	background-color: #ff631e; 
+	background-color: #ff631e;
 }
 
 
@@ -1716,11 +1681,11 @@ a:hover.back-to-top {
 	h3 {
 		font: 600 30px/1.2em "Montserrat", sans-serif;
 	}
-	
+
 	.button.solid {
 		width: auto;
 	}
-	
+
 	.navbar {
         padding: 20px 0;
 		border-bottom: 1px solid rgba(0, 0, 0, 0);
@@ -1731,12 +1696,12 @@ a:hover.back-to-top {
         transition: border-bottom .3s ease-in-out,background .3s ease-in-out,padding .3s ease-in-out;
 		-webkit-backface-visibility: hidden;
     }
-	
+
 	.navbar .nav.navbar-nav {
 		padding-top: 0px;
 		padding-bottom: 0px;
 	}
-	
+
 	.navbar .navbar-collapse {
 		border: none;
 	}
@@ -1746,12 +1711,12 @@ a:hover.back-to-top {
 		background-color: #191919;
 		-webkit-backface-visibility: hidden;
 	}
-	
+
 	.navbar .navbar-brand {
 		margin-right: 16px;
 		margin-left: 0px;
 	}
-	
+
 	.navbar .nav.navbar-nav li a,
 	.navbar .nav.navbar-nav.navbar-right li a	{
 		margin: 13px 12px 14px 12px;
@@ -1761,82 +1726,82 @@ a:hover.back-to-top {
 		-moz-transition: all .2s ease-in-out;
 		transition: all .2s ease-in-out;
 	}
-	
+
 	.navbar .nav.navbar-nav li.active a,
 	.navbar .nav.navbar-nav li a:hover	{
 		background: transparent;
 		color: #fff;
 		opacity: 1;
 	}
-	
-	header .header-content .content-overlay {
-		padding: 150px 0px 20px 0px;	
+
+	header .header-content.video-section .pattern-overlay {
+		padding: 130px 0px 20px 0px;
 	}
-	
+
 	header .header-content p.heading-paragraph {
 		margin-top: 15px;
 		font: 300 30px/1.4em "Khula", sans-serif;
 	}
-	
+
 	.customers {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
-	
+
 	.solutions {
 		padding-top: 75px;
 	}
-	
+
 	.solutions .nav-pills li {
 		display: inline-block;
 		width: auto;
 	}
-	
+
 	.solutions .solutions-tabs {
 		margin: 0 auto;
 		text-align: center;
 	}
-	
+
 	.products {
 		padding-top: 93px;
 		padding-bottom: 100px;
 	}
-	
+
 	.products .product-container {
 		margin-top: 20px;
 	}
-	
+
 	.products .product-container.middle,
 	.products .product-container.first	{
 		margin-top: 20px;
 		margin-bottom: 0px;
 	}
-	
+
 	.product-details-container,
 	.project-details-container {
 		padding: 35px;
 	}
-	
+
 	.pricing {
 		padding-top: 94px;
 		padding-bottom: 100px;
 	}
-	
+
 	/* Best Value Label */
 	.pricing .pricing-pane .label {
 		top: 50px;
 	}
-	
+
 	.projects {
 		padding-top: 76px;
 		padding-bottom: 100px;
 	}
-	
-	.projects .element-item { 
-		width: 25%; 
+
+	.projects .element-item {
+		width: 25%;
 	}
-	
-	.projects .grid .element-item .element-item-overlay { 
+
+	.projects .grid .element-item .element-item-overlay {
 		opacity: 0;
 		-o-transition: opacity .3s ease;
 		-webkit-transition: opacity .3s ease;
@@ -1844,43 +1809,43 @@ a:hover.back-to-top {
 		transition: opacity .3s ease;
 	}
 
-	.projects .grid .element-item .element-item-overlay span { 
+	.projects .grid .element-item .element-item-overlay span {
 		font: 500 16px/1em "Montserrat", sans-serif;
 	}
 
 	.projects .grid .element-item:hover .element-item-overlay {
 		opacity: 1;
 	}
-	
+
 	.testimonials .testimonials-text-pane-container {
 		margin-right: 80px;
 		margin-left: 80px;
 	}
-	
+
 	.testimonials .carousel-indicators {
 		margin-bottom: -50px;
 	}
-	
+
 	.about .about-text-pane-holder {
 		margin-right: 80px;
 		margin-left: 80px;
 	}
-	
+
 	.team {
 		padding-top: 75px;
 		padding-bottom: 80px;
 	}
-	
+
 	.newsletter {
 		padding-top: 75px;
 		padding-bottom: 85px;
 	}
-	
+
 	.contact {
 		padding-top: 95px;
 		padding-bottom: 83px;
 	}
-	
+
 	a.back-to-top {
 		right: 20px;
 		bottom: 20px;
@@ -1893,56 +1858,56 @@ a:hover.back-to-top {
 	p.under-heading {
 		width: 80%;
 	}
-	
+
 	/* Tab_a */
 	.solutions .my-swiper-container {
 		margin: 0px auto 0px auto;
 	}
-	
+
 	/* Tab_b */
 	.solutions .tab-content .tab-b .right-pane {
-		margin-left: 5px;	
+		margin-left: 5px;
 	}
-	
+
 	.solutions .tab-content .tab-b h3 {
 		margin-top: 20px;
 	}
-	
+
 	/* Tab_c */
 	.solutions .tab-content .tab-c .services-box {
 		margin-bottom: 0px;
 	}
-	
+
 	.solutions .tab-content .tab-c .row:nth-child(1) {
 		margin-bottom: 40px;
 	}
-	
+
 	.solutions .tab-content .tab-c .services-box p {
 		width: 90%;
 		margin-right: auto;
 		margin-left: auto;
 	}
-	
+
 	.products img {
 		margin-top: 40px;
 	}
-	
+
 	.product-details-container img {
 		max-width: 97%;
 	}
-	
+
 	.product-details-container h3 {
 		margin-top: 20px;
 	}
-	
+
 	.project-details-container h3 {
 		margin-top: 0px;
 	}
-	
+
 	.testimonials {
 		padding-bottom: 0px;
 	}
-	
+
 	.testimonials .testimonials-image-pane {
 		float: left;
 		width: 50%;
@@ -1953,20 +1918,20 @@ a:hover.back-to-top {
 		float: right;
 		width: 50%;
 	}
-	
+
 	.testimonials .testimonials-text-pane-container {
 		width: 350px;
 		margin-left: 70px;
 	}
-	
+
 	.testimonials h3 {
 		margin-top: 50px;
 	}
-	
+
 	.about {
 		padding-bottom: 0px;
 	}
-	
+
 	.about .about-text-pane {
 		width: 50%;
 		float: left;
@@ -1977,57 +1942,57 @@ a:hover.back-to-top {
 		width: 410px;
 		margin-right: 50px;
 	}
-	
+
 	.about h2 {
 		margin-top: 65px;
 	}
-	
+
 	.about .about-image-pane {
 		float: right;
 		width: 50%;
 		height: 650px;
 	}
-			
+
 	.contact ul {
 		margin-bottom: 10px;
 	}
-	
+
 	.contact .map-responsive {
 		height: 356px;
 	}
-	
+
 	.contact form .form-group .form-control {
 		display: inline-block;
 	}
-	
+
 	.contact form .form-group textarea.form-control {
 		display: block;
 	}
-	
+
 	.contact form .form-group.same-line	{
 		display: inline-block;
 		width: 144px;
 	}
-	
+
 	.contact form .form-group.same-line.middle	{
 		margin-right: 7px;
 		margin-left: 7px;
 	}
-	
+
 	.contact form input {
 		margin-top: 1px;
 		margin-bottom: 0px;
 	}
-	
+
 	.contact form textarea {
 		height: 235px;
 		margin-top: 1px;
 	}
-	
+
 	.contact form button {
 		margin-top: 17px;
 	}
-	
+
 	.footer h4,
 	.footer p,
 	.footer .social-icons-container	{
@@ -2041,7 +2006,7 @@ a:hover.back-to-top {
 	p.under-heading {
 		width: 60%;
 	}
-	
+
 	.solutions {
 		padding-bottom: 70px;
 	}
@@ -2050,11 +2015,11 @@ a:hover.back-to-top {
 	.solutions .tab-content .software-box {
 		margin-bottom: 25px;
 	}
-	
+
 	.solutions .my-swiper-container .swiper-slide img {
 		max-width: 555px; /* to prevent display problems in IE 11 */
 	}
-	
+
 	.solutions .tab-content .tab-b .right-pane h3 {
 		margin-top: 70px;
 	}
@@ -2062,7 +2027,7 @@ a:hover.back-to-top {
 	.solutions .tab-content .tab-c .left-pane h3 {
 		margin-top: 160px;
 	}
-	
+
 	.products .product-container .image-container {
 		width: 353px;
 		height: 199px;
@@ -2072,54 +2037,54 @@ a:hover.back-to-top {
 		width: 353px;
 		height: 199px;
 	}
-	
+
 	.projects .grid {
 		width: 100.4%; /* to eliminate 1px bottom gap between projects images */
 	}
-	
+
 	.testimonials .testimonials-text-pane-container {
 		width: 450px;
 		margin-left: 65px;
 	}
-	
+
 	.about .about-text-pane-holder {
 		width: 500px;
 		margin-right: 70px;
 	}
-	
+
 	.about h2 {
 		margin-top: 90px;
 	}
-	
+
 	.about ul {
 		padding-left: 40px;
 	}
-	
+
 	.statistics p {
-		font: 300 90px/1em "Montserrat", sans-serif;	
+		font: 300 90px/1em "Montserrat", sans-serif;
 	}
-	
+
 	.statistics .number-container {
 		margin-right: 35px;
 		margin-left: 35px;
 	}
-			
+
 	.contact .map-responsive {
 		margin-right: 7px;
 	}
-	
+
 	.contact form {
 		margin-left: 7px;
 	}
-	
+
 	.contact form .form-group.same-line	{
 		width: 175px;
 	}
-	
+
 	.contact form input {
 		padding-bottom: 1px;
 	}
-	
+
 	.footer {
 		padding-bottom: 10px;
 	}
